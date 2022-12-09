@@ -16,7 +16,9 @@ fn is_prime(n: u64) -> bool {
     if n <= 1 {
         return false;
     }
-    for a in 2..n {
+    let upperLimit = (n as f64).sqrt() as u64 + 1;
+    for a in 2..upperLimit {
+    // for a in 2..n{
         if n % a == 0 {
             return false;
         }
